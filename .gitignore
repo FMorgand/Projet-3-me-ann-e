@@ -6,16 +6,18 @@
 [Bb]uild
 [Ll]ibrary/
 sysinfo.txt
+*.stackdump
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 [Ee]xported[Oo]bj/
+.vs/
 /*.userprefs
 /*.csproj
 /*.pidb
 /*.suo
-/*.sln
+/*.sln*
 /*.user
 /*.unityproj
 /*.booproj
