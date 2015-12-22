@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\DM Prog 3GD\DM prog\Assets\Modules\[EXAM] Partiel\Scripts\CubeManagerScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerInteraction\CreationPanelManager.cs">
     <Files>
-      <File FileName="..\..\DM Prog 3GD\DM prog\Assets\Modules\[EXAM] Partiel\Scripts\CubeManagerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Entity\EntityManager.cs" Line="162" Column="32" />
+      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInteraction\CreationPanelManager.cs" Line="48" Column="81" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
