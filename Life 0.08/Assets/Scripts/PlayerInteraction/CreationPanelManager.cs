@@ -41,11 +41,11 @@ public class CreationPanelManager : MonoBehaviour {
 	public void CreateParameter()
 	{
 		Entity[] predators = new Entity[1];
-		predators.SetValue (GameObject.Find (_predator.text).GetComponent<Entity> (), 0);
+		predators.SetValue (_manager._speciesPrefabs[_manager._speciesName.IndexOf(_predator.text)].GetComponent<Entity>(),0);
 
 		GameObjectWithRate[] preys = new GameObjectWithRate[1];
 		GameObjectWithRate newPrey = new GameObjectWithRate();
-		newPrey.prefab = GameObject.Find (_prey.text);
+		newPrey.prefab = (_manager._speciesPrefabs[_manager._speciesName.IndexOf(_prey.text)]);
 		newPrey.rate = 10;
 		preys.SetValue (newPrey, 0);
 

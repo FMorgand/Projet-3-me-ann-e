@@ -202,18 +202,18 @@ MonoBehaviour:
     min: 5
     max: 6
   _rangeOfView:
-    min: 400
-    max: 400
+    min: 20
+    max: 30
   _lifetime:
     min: 65
     max: 75
   _maxEnergy:
     min: 30
     max: 35
-  _hungryLimit: 0
+  _hungryLimit: .5
   _reproductionTime:
-    min: 20
-    max: 25
+    min: 30
+    max: 40
   fleeFromEntities:
   - {fileID: 11453372, guid: 3a905023828305f4bbe282b97ac95091, type: 2}
   canEatEntities:
@@ -344,11 +344,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _reproductionTime.min
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _reproductionTime.max
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _lifetime.min
@@ -368,7 +368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _hungryLimit
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _speed.max
@@ -380,11 +380,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _rangeOfView.min
-      value: 400
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: _rangeOfView.max
-      value: 400
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: canEatEntities.Array.data[0].prefab

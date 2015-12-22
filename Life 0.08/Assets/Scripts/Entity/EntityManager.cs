@@ -40,7 +40,9 @@ public class EntityManager : MonoBehaviour
 	float spawn_timer;
 
 	public List<string> _speciesName = new List<string>();
+	public List<GameObject> _speciesPrefabs = new List<GameObject> ();
 	public List<List<Entity>> _speciesList = new List<List<Entity>>();
+
 
 	void Awake () 
 	{
@@ -92,6 +94,7 @@ public class EntityManager : MonoBehaviour
 
 				_speciesName.Add(entity.prefab.name);
 				int index = _speciesName.IndexOf(entity.prefab.name);
+				_speciesPrefabs.Add(entity.prefab);
 				List<Entity> newRace = new List<Entity>();
 				_speciesList.Add(newRace);
 				
@@ -156,6 +159,7 @@ public class EntityManager : MonoBehaviour
 
 		_speciesName.Add(newRace.name);
 		int index = _speciesName.IndexOf(newRace.name);
+		_speciesPrefabs.Add(newRace);
 		List<Entity> newSpecies = new List<Entity>();
 		_speciesList.Add(newSpecies);
 

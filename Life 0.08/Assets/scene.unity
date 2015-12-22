@@ -350,6 +350,7 @@ MonoBehaviour:
   canOutnumberMaxEnergy: 0
   darwinEvolution: 1
   _speciesName: []
+  _speciesPrefabs: []
 --- !u!4 &179316280
 Transform:
   m_ObjectHideFlags: 0
