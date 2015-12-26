@@ -35,7 +35,8 @@ public class Entity : MonoBehaviour
 	bool hungry;
 	[HideInInspector] public float reproductionTime;
 	float reproTimer;
-	bool canReproduct= true;
+	bool _isNomade = true;
+	bool canReproduct = true;
 	Status status = Status.idle; 
 	public Status statusDisplay;
 	public Vector3 destination;
@@ -70,6 +71,8 @@ public class Entity : MonoBehaviour
 		} else {
 			canReproduct = true;
 		}
+
+		StartCoroutine (AddRessource(1,1)); 
 	}
 
 	void Start()
@@ -104,6 +107,7 @@ public class Entity : MonoBehaviour
 		if (!hungry && canReproduct) {
 			if (reproTimer <= 0) {
 				status = Status.loving;
+				
 			} else {
 				reproTimer -= Time.deltaTime * Manager.timeSpeed;
 			}
@@ -238,8 +242,28 @@ public class Entity : MonoBehaviour
 
 	void love () 
 	{
-		MakeABaby ();
+		if(_isNomade)
+		{
+			MakeABaby ();
+		}
+		else
+		{
+
+		}
 	}
+	#endregion
+
+	#region RessourceManaging
+
+		IEnumerator AddRessource (float timeToWait = 1, int numberToAdd = 1)
+	{
+		for(;;)
+		{
+			yield return new WaitForSeconds(timeToWait);
+			EntityManager._ressources += numberToAdd;
+		}
+	}
+
 	#endregion
 
 	Vector3 GetRandomDestination () 

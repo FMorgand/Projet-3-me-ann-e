@@ -22,6 +22,8 @@ public class EntityManager : MonoBehaviour
 	public float spawnTime; 
 	public GameObjectWithRate[] entitiesSpawnRate;
 
+	static public int _ressources = 0;
+
 
 	
 	public enum EatMechanics {

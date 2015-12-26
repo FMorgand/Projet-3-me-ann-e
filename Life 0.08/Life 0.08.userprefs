@@ -1,10 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerInteraction\CreationPanelManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Entity\Entity.cs">
     <Files>
-      <File FileName="Assets\Scripts\Entity\EntityManager.cs" Line="162" Column="32" />
-      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerInteraction\CreationPanelManager.cs" Line="48" Column="81" />
+      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="251" Column="4" />
+      <File FileName="Assets\Scripts\Entity\EntityManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInteraction\CreationPanelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInteraction\RessourceUIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Terrain\BaseTerrain.cs" Line="17" Column="2" />
+      <File FileName="Assets\Scripts\PlayerInteraction\ZoneSpawner.cs" Line="24" Column="60" />
+      <File FileName="Assets\Scripts\PlayerInteraction\PlantZoneSpawner.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\Terrain\PlantZone.cs" Line="24" Column="57" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
