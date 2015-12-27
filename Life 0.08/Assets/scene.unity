@@ -412,6 +412,8 @@ MonoBehaviour:
     rate: 0
   - prefab: {fileID: 114084, guid: 1dc6b3140af16d841961cc5c69c789e5, type: 2}
     rate: 70
+  - prefab: {fileID: 114084, guid: 3a905023828305f4bbe282b97ac95091, type: 2}
+    rate: 10
   activateSpawn: 0
   spawnTime: .5
   entitiesSpawnRate:
@@ -5278,7 +5280,7 @@ GameObject:
   - 114: {fileID: 1603272966}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: ReprodZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

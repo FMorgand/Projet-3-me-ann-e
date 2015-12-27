@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Trigger
   - Entity
+  - ReprodZone
   layers:
   - Default
   - TransparentFX

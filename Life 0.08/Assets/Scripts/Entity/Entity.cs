@@ -9,7 +9,8 @@ public class Entity : MonoBehaviour
 		moving,
 		hunting,
 		fleeing,
-		loving
+		loving,
+		goingHome
 	}
 
 	#region Parameters to configure in inspector
@@ -35,7 +36,7 @@ public class Entity : MonoBehaviour
 	bool hungry;
 	[HideInInspector] public float reproductionTime;
 	float reproTimer;
-	bool _isNomade = true;
+	public bool _isNomade = true;
 	bool canReproduct = true;
 	Status status = Status.idle; 
 	public Status statusDisplay;
@@ -104,7 +105,7 @@ public class Entity : MonoBehaviour
 		energy -= Time.deltaTime * Manager.timeSpeed;
 
 		// Reproduction time gestion
-		if (!hungry && canReproduct) {
+		if (!hungry && canReproduct && status != Status.goingHome) {
 			if (reproTimer <= 0) {
 				status = Status.loving;
 				
@@ -120,6 +121,7 @@ public class Entity : MonoBehaviour
 		case Status.moving: move (); break;
 		case Status.hunting: hunt(); break;
 		case Status.loving: love(); break;
+		case Status.goingHome: Reproduce(); break;
 		default : idle (); break;
 		}
 	}
@@ -248,9 +250,19 @@ public class Entity : MonoBehaviour
 		}
 		else
 		{
-
+			CheckForReprodZone();
 		}
 	}
+
+	void Reproduce()
+	{
+		if(status == Status.goingHome && Vector3.Distance(this.transform.position, _agent.destination) < 2f)
+		{
+			MakeABaby();
+			status = Status.idle;
+		}
+	}
+	
 	#endregion
 
 	#region RessourceManaging
@@ -387,6 +399,30 @@ public class Entity : MonoBehaviour
 			return true;
 		}
 		return false;
+	}
+
+	void CheckForReprodZone()
+	{
+		GameObject[] reprodZones = GameObject.FindGameObjectsWithTag ("ReprodZone");
+
+		//destination random si rien n'est trouvé
+		_agent.destination = GetRandomDestination ();
+
+		foreach(GameObject i in reprodZones)
+		{
+			float radius = i.transform.localScale.x/2;
+			if(Vector3.Distance(this.transform.position, i.transform.position) < rangeOfView + radius)
+			{
+				Vector2 circlePoint = Random.insideUnitCircle * radius;
+				Vector3 finalPos = new Vector3(i.transform.position.x + circlePoint.x, i.transform.position.y, i.transform.position.z + circlePoint.y);
+				status = Status.goingHome;
+				_agent.destination = finalPos;
+				break;
+			}
+		}
+
+
+
 	}
 	#endregion
 
