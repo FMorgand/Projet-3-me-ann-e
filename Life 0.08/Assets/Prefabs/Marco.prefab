@@ -225,6 +225,7 @@ MonoBehaviour:
   energy: 0
   hungryLimit: .200000003
   reproductionTime: 0
+  _isNomade: 0
   statusDisplay: 0
   destination: {x: 0, y: 0, z: 0}
   _position: {x: 0, y: 0, z: 0}
@@ -417,6 +418,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Acceleration
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _isNomade
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
